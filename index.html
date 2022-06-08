@@ -1,0 +1,91 @@
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("https://images.unsplash.com/photo-1546545346-c16aa0df5601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80");
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #quote-text{
+        font-family: "Neue Montreal", sans-serif;
+        font-size: 40pt;
+        text-align: center;
+        color: #eeeeee;
+        width: 800px;
+        line-height: 1em;
+    }
+    #generate-btn{
+        padding: 20px;
+        font-family: "Neue Montreal Bold", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        background-color: #131313;
+        color: #eeeeee;
+        border: none;
+        border-radius: 10px;
+        transition: 0.1s ease;
+    }
+    #generate-btn:active{
+        transform: scale(0.9);
+    }
+    #quote-text::before{
+        content: "\""
+    }
+    #quote-text::after{
+        content: "\""
+    }
+    .wrapper h3:nth-child(1){
+        font-family: "Neue Montreal Light", sans-serif;
+        position: relative;
+        left: 200px;
+        white-space: nowrap;
+        width: 25%;
+        padding: 20px;
+        color: #eeeeee;
+    }
+    .wrapper h3:nth-child(2){
+        font-family: "Neue Montreal Light", sans-serif;
+        position: relative;
+        right: 200px;
+        white-space: nowrap;
+        width: 25%;
+        padding: 20px;
+        color: #eeeeee;
+    }
+    .container{
+        display: flex;
+        margin-top: -50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="wrapper">
+        <p id="quote-text">Quote Here</p>
+        <div class="container">
+            <h3 id="author-text">Author: ...</h3>
+            <h3 id="category-text">Category: ...</h3>
+        </div>
+        <button id="generate-btn">Generate</button>
+    </div>
+
+</body>
+
+<script src="app.js"></script>
+</html>
